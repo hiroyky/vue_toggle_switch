@@ -1,0 +1,10 @@
+<div class="toggle-switch">
+<div class="toggle-switch__switch" @click="onToggled">
+    <input type="checkbox" class="toggle-switch__switch__checkbox">
+    <div 
+     class="toggle-switch__switch__slider" 
+     :class="{'toggle-switch__switch__slider--enabled': enabled, 'toggle-switch__switch__slider--disabled': !enabled}">
+    </div>
+</div>
+<label class="toggle-switch__label"><slot></slot></label>
+</div>
