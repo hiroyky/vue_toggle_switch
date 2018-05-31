@@ -3,7 +3,7 @@
     <input type="checkbox" class="toggle-switch__switch__checkbox">
     <div 
      class="toggle-switch__switch__slider" 
-     :class="{'toggle-switch__switch__slider--enabled': enabled, 'toggle-switch__switch__slider--disabled': !enabled}">
+     :class="{'toggle-switch__switch__slider--enabled': isEnabled, 'toggle-switch__switch__slider--disabled': !isEnabled}">
     </div>
 </div>
 <label class="toggle-switch__label"><slot></slot></label>

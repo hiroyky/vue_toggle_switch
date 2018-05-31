@@ -9,10 +9,13 @@ import { Component, Prop } from 'vue-property-decorator';
 @Component({})
 export default class extends Vue {
     @Prop()
-    enabled: boolean;
+    protected enabled: boolean;
+
+    protected isEnabled = this.enabled ? this.enabled : false;
 
     protected onToggled() {
-        this.enabled = !this.enabled;
+        this.isEnabled = !this.isEnabled;
+        this.$emit("toggled", this.isEnabled);
     }
 }
 </script>
