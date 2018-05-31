@@ -1,10 +1,12 @@
 <div class="toggle-switch">
 <div class="toggle-switch__switch" @click="onToggled">
+<v-touch class="c-toggle-switch__switch--vtouch" @swipeleft="turnOff" @swiperight="turnOn" :swipe-options="{direction: 'horizontal'}">
     <input type="checkbox" class="toggle-switch__switch__checkbox">
     <div 
      class="toggle-switch__switch__slider" 
      :class="{'toggle-switch__switch__slider--enabled': isEnabled, 'toggle-switch__switch__slider--disabled': !isEnabled}">
     </div>
+</v-touch>
 </div>
 <label class="toggle-switch__label"><slot></slot></label>
 </div>

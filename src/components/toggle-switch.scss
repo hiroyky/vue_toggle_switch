@@ -10,6 +10,11 @@
             display: none;
         }
 
+        &--vtouch {
+            width: 100%;
+            height: 100%;
+        }
+
         &__slider {
             $slider_margin: 4px;
             $slider_size: 26px;
